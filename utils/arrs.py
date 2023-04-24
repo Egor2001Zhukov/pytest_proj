@@ -13,8 +13,10 @@ def get(array, index, default=None):
     """
     if index < 0:
         return default
-
-    return array[index]
+    elif len(array) == 0:
+        return default
+    elif len(array)-1 >= index:
+        return array[index]
 
 
 def my_slice(coll, start=0, end=None):
